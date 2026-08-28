@@ -1,0 +1,322 @@
+/* =========================================================
+   LEVEL-UP GAMER
+   Bootstrap entrega la base; este archivo personaliza la marca.
+   ========================================================= */
+
+/*NOTAS:
+Cuando el selector CSS parte sin nada: hace referencia a una etiqueta osea aplica este estilo a todos los elementos de ese tipo
+Con punto .: selecciona una clase
+Con #: selecciona un id
+Con :: normalmente es una pseudo-clase. :root es una pseudo-clase especial.
+  Representa el elemento raíz del documento. En una página HTML, básicamente corresponde a: <html>
+  Se usa muchísimo para declarar variables CSS y luego se usan con "var(--color-principal)" por ejemplo
+:hover significa: aplica este estilo cuando el mouse está encima.
+:focus ocurre cuando estás escribiendo dentro del input.
+:visited corresponde a un enlace que ya visitaste.
+Dos puntos dobles :: normalmente indican un pseudo-elemento.
+  La diferencia conceptual es:
+    :hover
+    :focus
+    :root
+    son estados o condiciones de un elemento.
+  Mientras:
+    ::before
+    ::after
+    ::first-letter
+    representan una parte especial del elemento.
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700&family=Roboto:wght@400;500;700&display=swap");
+
+:root {
+  --levelup-bg: #070a0f;
+  --levelup-surface: #11161d;
+  --levelup-surface-2: #171d25;
+  --levelup-blue: #1e90ff;
+  --levelup-green: #39ff14;
+  --levelup-text: #ffffff;
+  --levelup-muted: #aeb7c2;
+  --levelup-border: rgba(255, 255, 255, 0.09);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--levelup-bg);
+  color: var(--levelup-text);
+  font-family: "Roboto", sans-serif;
+}
+
+.gamer-title {
+  font-family: "Orbitron", sans-serif;
+  letter-spacing: 0.04em;
+}
+
+.text-levelup {
+  color: var(--levelup-green) !important;
+}
+
+.section-kicker {
+  display: inline-block;
+  margin-bottom: 0.35rem;
+  color: var(--levelup-blue);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+/* ---------- Login ---------- */
+.login-page {
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(30, 144, 255, 0.16),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 85% 80%,
+      rgba(57, 255, 20, 0.12),
+      transparent 25%
+    ),
+    var(--levelup-bg);
+}
+
+.login-card {
+  background-color: rgba(17, 22, 29, 0.95);
+  color: var(--levelup-text);
+  border: 1px solid var(--levelup-border) !important;
+  border-radius: 1.25rem;
+}
+
+.brand-icon {
+  display: grid;
+  place-items: center;
+  width: 72px;
+  height: 72px;
+  border: 1px solid rgba(57, 255, 20, 0.35);
+  border-radius: 50%;
+  color: var(--levelup-green);
+  font-size: 2rem;
+  background: rgba(57, 255, 20, 0.06);
+}
+
+.form-control,
+.input-group-text {
+  background-color: #0c1117;
+  border-color: var(--levelup-border);
+  color: var(--levelup-text);
+}
+
+.form-control:focus {
+  background-color: #0c1117;
+  color: var(--levelup-text);
+  border-color: var(--levelup-blue);
+  box-shadow: 0 0 0 0.2rem rgba(30, 144, 255, 0.15);
+}
+
+.form-control::placeholder {
+  color: #697481;
+}
+
+.input-group-text {
+  color: var(--levelup-blue);
+}
+
+/* ---------- Botón de marca ---------- */
+.btn-levelup {
+  --bs-btn-color: #031004;
+  --bs-btn-bg: var(--levelup-green);
+  --bs-btn-border-color: var(--levelup-green);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--levelup-blue);
+  --bs-btn-hover-border-color: var(--levelup-blue);
+  font-weight: 700;
+}
+
+/* ---------- Navegación ---------- */
+.top-bar {
+  background-color: #020408;
+  border-bottom: 1px solid var(--levelup-border);
+}
+
+.levelup-navbar {
+  background-color: rgba(7, 10, 15, 0.95);
+  border-bottom: 1px solid var(--levelup-border);
+  backdrop-filter: blur(10px);
+}
+
+.levelup-navbar .nav-link {
+  color: #d8dee6;
+}
+
+.levelup-navbar .nav-link:hover,
+.levelup-navbar .nav-link.active {
+  color: var(--levelup-green);
+}
+
+/* ---------- Carrusel ---------- */
+.carousel {
+  border: 1px solid var(--levelup-border);
+  border-radius: 1rem;
+}
+
+.carousel-img {
+  height: 420px;
+  object-fit: cover;
+  filter: brightness(0.72);
+}
+
+.hero-caption {
+  right: 42%;
+  bottom: 18%;
+  left: 7%;
+  padding: 1.25rem;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+  border-radius: 1rem;
+}
+
+/* ---------- Bloques de información ---------- */
+.info-box {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.2rem;
+  background-color: var(--levelup-surface);
+  border: 1px solid var(--levelup-border);
+  border-radius: 1rem;
+}
+
+.section-dark {
+  background-color: #0b0f14;
+  border-top: 1px solid var(--levelup-border);
+  border-bottom: 1px solid var(--levelup-border);
+}
+
+/* ---------- Categorías ---------- */
+.category-card {
+  display: flex;
+  min-height: 130px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  color: var(--levelup-text);
+  text-align: center;
+  text-decoration: none;
+  background-color: var(--levelup-surface);
+  border: 1px solid var(--levelup-border);
+  border-radius: 1rem;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.category-card i {
+  color: var(--levelup-blue);
+  font-size: 2rem;
+}
+
+.category-card:hover {
+  color: var(--levelup-text);
+  transform: translateY(-4px);
+  border-color: rgba(57, 255, 20, 0.55);
+}
+
+.category-card:hover i {
+  color: var(--levelup-green);
+}
+
+/* ---------- Productos ---------- */
+.product-card {
+  overflow: hidden;
+  color: var(--levelup-text);
+  background-color: var(--levelup-surface);
+  border: 1px solid var(--levelup-border);
+  border-radius: 1rem;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.25);
+}
+
+.product-placeholder {
+  display: grid;
+  min-height: 190px;
+  place-items: center;
+  background:
+    radial-gradient(circle, rgba(30, 144, 255, 0.16), transparent 50%), #0b1016;
+}
+
+.product-placeholder i {
+  color: var(--levelup-blue);
+  font-size: 4.5rem;
+}
+
+.product-category {
+  color: var(--levelup-blue);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.product-price {
+  color: var(--levelup-green);
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+.product-price small {
+  color: var(--levelup-muted);
+  font-size: 0.75rem;
+}
+
+/* ---------- Soporte ---------- */
+.support-banner {
+  background:
+    linear-gradient(135deg, rgba(30, 144, 255, 0.12), rgba(57, 255, 20, 0.06)),
+    var(--levelup-surface);
+  border: 1px solid var(--levelup-border);
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  background-color: #030507;
+  border-top: 1px solid var(--levelup-border);
+}
+
+.site-footer a {
+  color: var(--levelup-muted);
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  color: var(--levelup-green);
+}
+
+.footer-links li {
+  margin-bottom: 0.5rem;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 767.98px) {
+  .carousel-img {
+    height: 330px;
+  }
+
+  .hero-caption {
+    right: 8%;
+    bottom: 10%;
+  }
+
+  .hero-caption .display-5,
+  .hero-caption .display-6 {
+    font-size: 1.7rem;
+  }
+}
