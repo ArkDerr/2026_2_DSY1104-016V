@@ -1,5 +1,5 @@
-import react from '@vitejs/plugin-react'
-import { defineConfig } from 'vite'
+import react from "@vitejs/plugin-react";
+import { defineConfig } from "vite";
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -8,6 +8,15 @@ export default defineConfig({
   test: {
     environment: "jsdom",
     setupFiles: "./src/test/setup.js",
-  },
 
-})
+    coverage: {
+      provider: "v8",
+
+      reporter: ["text", "html"],
+
+      include: ["src/App.jsx", "src/components/**/*.jsx", "src/pages/**/*.jsx"],
+
+      exclude: ["src/**/*.test.jsx", "src/test/**"],
+    },
+  },
+});
