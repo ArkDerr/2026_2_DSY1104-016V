@@ -1,0 +1,10 @@
+target/
+.DS_Store
+.classpath
+.project
+.settings/
+data/*.mv.db
+data/*.trace.db
+data/*.lock.db
+data/*.temp.db
+*.log
